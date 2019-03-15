@@ -1,0 +1,21 @@
+<li [ngClass]="{'ui-messages': true,
+'ui-messages-success': loveIts > 0,
+'ui-messages-error': loveIts < 0 }">
+  <div class="ui-g">
+    <div class="ui-g-6">
+      <h2>{{title}}</h2>
+    </div>
+    <div class="ui-g-6">
+      <p style="text-align: right">{{created_at | date: 'short' }}</p>
+    </div>
+
+    <div class="ui-g-12">
+      {{content}}
+    </div>
+
+    <div class="ui-g-12">
+      <button pButton type="button" class="ui-button-success" label="loveIts" (click)=onLoveIts() ></button>
+      <button pButton type="button" class="ui-button-danger" label="don't loveIts" (click)=onDontLoveIts()></button>
+    </div>
+  </div>
+</li>
